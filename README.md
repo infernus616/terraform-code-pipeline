@@ -1,27 +1,36 @@
-# AWS Organization Example
+# AWS Organization Setup Guide
 
-## About
+## Overview
 
-This repository contains all the necessary code to create:
+This repository provides the necessary configuration files to set up the following AWS infrastructure:
 
-* AWS organization with three accounts:
-  * users
-  * staging
-  * production
-* IAM groups and roles for developers,
-* S3 bucket & DynamoDB table for Terraform backend.
+- **AWS Organization** with the following three accounts:
+  - `users`
+  - `staging`
+  - `production`
+- **IAM Groups and Roles** for developer access.
+- **Terraform Backend** configuration using an S3 bucket and DynamoDB table.
 
-## Quickstart
+---
 
-1. Substitute the dummy values in [locals.tf](locals.tf).
-1. Optionally add users to [users.tf](users.tf), detailed instructions on that are in [adding-a-user.md](docs/adding-a-user.md).
-1. Initialize the Terraform and apply plan:
-    ```
-    $ terraform init
-    $ terraform apply
-    ```
-1. Commit the state in `terraform.tfstate` to your repository and you're done!
+## Quickstart Guide
 
-## Step by step
+To get started, follow these steps:
 
-Follow the instructions on my blog post to get a full explanation on what is being created and how it is configured: https://tbekas.dev/posts/setting-up-an-aws-organization-from-scratch-with-terraform
+1. **Update Configuration:**
+   - Replace placeholder values in the [locals.tf](locals.tf) file with actual values based on your setup.
+
+2. **Optional - Add Users:**  
+   - To include users, edit the [users.tf](users.tf) file as needed.
+   - For detailed instructions, refer to [adding-a-user.md](docs/adding-a-user.md).
+
+3. **Initialize Terraform and Apply the Plan:**  
+   Run the following commands to initialize and deploy the infrastructure:  
+   ```bash
+   terraform init  
+   terraform apply  
+   ```
+
+4. **Commit the State File:**  
+   - Once the configuration is applied, commit the `terraform.tfstate` file to your repository.  
+   - Your AWS Organization setup is now complete! 🎉  
